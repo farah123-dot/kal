@@ -1,11 +1,15 @@
-# Welcome to your Jupyter Book
+## Sistem Persamaan Linier 
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Komputasi aljabar linier adalah proses komputasi yang menggunakan algoritme untuk menyelesaikan masalah aljabar linear pada komputer. Aljabar linear sendiri merupakan cabang matematika yang mempelajari ruang vektor dan transformasi linear. 
 
-Check out the content pages bundled with this sample book to see more.
+Komputasi aljabar linier adalah proses komputasi yang menggunakan algoritme untuk menyelesaikan masalah aljabar linear pada komputer. Aljabar linear sendiri merupakan cabang matematika yang mempelajari ruang vektor dan transformasi linear. 
 
+Nama : Farah Dita Artika Febrianti Sriyono
+
+Nim : 230411100088
+
+Prodi : Teknik Informatika 
+
+Email : farahd479@gmail.com
 ```{tableofcontents}
 ```
