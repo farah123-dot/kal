@@ -6,8 +6,9 @@
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; My sample book</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Penyelesaian Sistem Persamaan Linier &#8212; My sample book</title>
   
   
   
@@ -56,9 +57,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'genindex';</script>
-    <link rel="index" title="Index" href="#" />
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'jawab';</script>
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Sistem Persamaan Linier" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -121,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -178,8 +180,8 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="jawab.html">Penyelesaian Sistem Persamaan Linier</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Penyelesaian Sistem Persamaan Linier</a></li>
 </ul>
 
     </div>
@@ -251,7 +253,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fjawab.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -263,6 +265,54 @@
   </span>
 <span class="btn__text-container">Open issue</span>
 </a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/jawab.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
 </li>
       
   </ul>
@@ -304,7 +354,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -315,11 +367,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1></h1>
+    <h1>Penyelesaian Sistem Persamaan Linier</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris-elementer">Operasi Baris Elementer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gauss">Eliminasi Gauss</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-1">Contoh Soal 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-2">Contoh Soal 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-3">Contoh Soal 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-4">Contoh Soal 4</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -329,13 +394,203 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
+  <section id="penyelesaian-sistem-persamaan-linier">
+<h1>Penyelesaian Sistem Persamaan Linier<a class="headerlink" href="#penyelesaian-sistem-persamaan-linier" title="Link to this heading">#</a></h1>
+<section id="operasi-baris-elementer">
+<h2>Operasi Baris Elementer<a class="headerlink" href="#operasi-baris-elementer" title="Link to this heading">#</a></h2>
+</section>
+<section id="eliminasi-gauss">
+<h2>Eliminasi Gauss<a class="headerlink" href="#eliminasi-gauss" title="Link to this heading">#</a></h2>
+</section>
+<section id="contoh-soal-1">
+<h2>Contoh Soal 1<a class="headerlink" href="#contoh-soal-1" title="Link to this heading">#</a></h2>
+<p>Selesaikan dengan menggunakan eleminasi gauss</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{cc}
+x_1+2x_2+3x_3&amp;=6\\
+2x_1+4x_2+6x_3&amp;=12\\
+x_3+x_2&amp;=2
+\end{array}
+\end{split}\]</div>
+<p>Penyelesaian
+Langkah 1: Tulis dalam Bentuk Matriks Augmented
+Bentuk matriks augmented dari sistem ini adalah:</p>
+<p><br />
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; | 6 \
+2 &amp; 4 &amp; 6 &amp; | 12 \
+0 &amp; 1 &amp; 1 &amp; | 2
+\end{bmatrix}</p>
+<p>Langkah 2: Eliminasi Baris
+Kita akan menghilangkan elemen di bawah elemen utama di kolom pertama. Gunakan operasi:</p>
+<p>\begin{array}{cc}
+R_2 \rightarrow R_2 - 2R_1
+\end{array}</p>
+<p>Sehingga:</p>
+<p><br />
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; | 6 \
+0 &amp; 0 &amp; 0 &amp; | 0 \
+0 &amp; 1 &amp; 1 &amp; | 2
+\end{bmatrix}</p>
+<p>Langkah 3: Interpretasi
+Baris kedua dirubah menjadi <em>0 = 0</em></p>
+<p>\begin{aligned}
+x_1 + 2x_2 + 3x_3 &amp;= 6 \
+x_2 + x_3 &amp;= 2
+\end{aligned}</p>
+<p>Langkah 4: Substitusi
+Dari persamaan kedua:</p>
+<p>\begin{array}{cc}
+x_2 = 2 - x_3
+\end{array}</p>
+<p>Substitusikan ke persamaan pertama:</p>
+<p>\begin{array}{cc}
+x_1 + 2(2 - x_3) + 3x_3&amp; = 6\
+x_1 + 4 - 2x_3 + 3x_3&amp; = 6\
+x_1 + 4 + x_3&amp; = 6\
+x_1 =&amp; 2 - x_3
+\end{array}</p>
+<p>Kesimpulan
+Solusi umum dari sistem ini adalah:</p>
+<p>\begin{aligned}
+x_1 &amp;= 2 - x_3 \
+x_2 &amp;= 2 - x_3 \
+x_3 &amp;= x_3
+\end{aligned}</p>
+</section>
+<section id="contoh-soal-2">
+<h2>Contoh Soal 2<a class="headerlink" href="#contoh-soal-2" title="Link to this heading">#</a></h2>
+<p>Selesaikan dengan menggunakan eliminasi gauss
+$<span class="math notranslate nohighlight">\(
+\begin{array}{cc}
+x_1+x_2+x_3&amp;=3\\
+2x_1+x_3&amp;=5\\
+x_1+2x_2&amp;=3
+\end{array}
+\)</span>$</p>
+<p>Penyelesaian
+Langkah 1: Tulis dalam Bentuk Matriks Augmented</p>
+<p>\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 3 \
+2 &amp; 0 &amp; 1 &amp; | 5 \
+1 &amp; 2 &amp; 0 &amp; | 3
+\end{bmatrix}</p>
+<p>Langkah 2: Eliminasi Baris
+Kita akan menghilangkan elemen di bawah elemen utama di kolom pertama.</p>
+<p>\begin{array}{cc}
+R_2 \rightarrow R_2 - 2R_1
+\end{array}</p>
+<p>\begin{array}{cc}
+R_3 \rightarrow R_3 - R_1
+\end{array}</p>
+<p>Sehingga matriks berubah menjadi:</p>
+<p>\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 3 \
+0 &amp; -2 &amp; -1 &amp; | -1 \
+0 &amp; 1 &amp; -1 &amp; | 0
+\end{bmatrix}</p>
+<p>Selanjutnya, buat elemen utama di baris kedua menjadi 1 dengan membagi baris kedua dengan -2:</p>
+<p>\begin{array}{cc}
+R_2 \rightarrow \frac{R_2}{-2}
+\end{array}</p>
+<p>Hasilnya:</p>
+<p>\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 3 \
+0 &amp; 1 &amp; \frac{1}{2} &amp; | \frac{1}{2} \
+0 &amp; 1 &amp; -1 &amp; | 0
+\end{bmatrix}</p>
+<p>Kemudian eliminasi elemen di bawah elemen utama dengan:</p>
+<p>\begin{array}{cc}
+R_3 \rightarrow R_3 - R_2
+\end{array}</p>
+<p>Sehingga diperoleh:
+\begin{bmatrix}
+1 &amp; 1 &amp; 1 &amp; | 3 \
+0 &amp; 1 &amp; \frac{1}{2} &amp; | \frac{1}{2} \
+0 &amp; 0 &amp; -\frac{3}{2} &amp; | -\frac{1}{2}
+\end{bmatrix}
+Langkah 3: Substitusi Balik*
+Dari baris ketiga:</p>
+<p>\begin{array}{cc}
+-\frac{3}{2} x_3 = -\frac{1}{2}
+\end{array}</p>
+<p>\begin{array}{cc}
+x_3 = \frac{1}{3}
+\end{array}</p>
+<p>Dari baris kedua:</p>
+<p>\begin{array}{cc}
+x_2 + \frac{1}{2} x_3 = \frac{1}{2}
+\end{array}</p>
+<p>\begin{array}{cc}
+x_2 + \frac{1}{2} \times \frac{1}{3} = \frac{1}{2}
+\end{array}</p>
+<p>\begin{array}{cc}
+x_2 + \frac{1}{6} = \frac{1}{2}
+\end{array}</p>
+<p>\begin{array}{cc}
+x_2 = \frac{1}{2} - \frac{1}{6} = \frac{3}{6} - \frac{1}{6} = \frac{2}{6} = \frac{1}{3}
+\end{array}</p>
+<p>Dari baris pertama:
+\begin{array}{cc}
+x_1 + x_2 + x_3 = 3
+\end{array}</p>
+<p>\begin{array}{cc}
+x_1 + \frac{1}{3} + \frac{1}{3} = 3
+\end{array}</p>
+<p>\begin{array}{cc}
+x_1 = 3 - \frac{2}{3} = \frac{9}{3} - \frac{2}{3} = \frac{7}{3}
+\end{array}</p>
+<p>Kesimpulan
+Jadi, solusi dari sistem persamaan adalah:
+\begin{aligned}
+x_1 &amp;= \frac{7}{3} \
+x_2 &amp;= \frac{1}{3} \
+x_3 &amp;= \frac{1}{3}
+\end{aligned}</p>
+</section>
+<section id="contoh-soal-3">
+<h2>Contoh Soal 3<a class="headerlink" href="#contoh-soal-3" title="Link to this heading">#</a></h2>
+<p>Selesaikan dengan menggunakan eliminasi gauss
+$<span class="math notranslate nohighlight">\(
+\begin{array}{cc}
+2x_1+2x_2&amp;=6\\
+x_1+x_2&amp;=2
+\end{array}
+\)</span>$</p>
+</section>
+<section id="contoh-soal-4">
+<h2>Contoh Soal 4<a class="headerlink" href="#contoh-soal-4" title="Link to this heading">#</a></h2>
+<p>Selesaikan dengan menggunakan eliminasi gauss
+$<span class="math notranslate nohighlight">\(
+\begin{array}{cc}
+x_1+x_2&amp;=5\\
+x_1+2x_3&amp;=6\\
+\end{array}
+\)</span>$</p>
+</section>
+</section>
 
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
-</div>
-
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -347,12 +602,41 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Sistem Persamaan Linier</p>
+      </div>
+    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris-elementer">Operasi Baris Elementer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gauss">Eliminasi Gauss</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-1">Contoh Soal 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-2">Contoh Soal 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-3">Contoh Soal 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-4">Contoh Soal 4</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
