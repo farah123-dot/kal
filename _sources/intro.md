@@ -1,4 +1,4 @@
-## Sistem Persamaan Linier 
+## Komputasi Aljabar Linier 
 
 Komputasi aljabar linier adalah proses komputasi yang menggunakan algoritme untuk menyelesaikan masalah aljabar linear pada komputer. Aljabar linear sendiri merupakan cabang matematika yang mempelajari ruang vektor dan transformasi linear. 
 
