@@ -22,7 +22,6 @@ $$
 
 Penyelesaian
 Langkah 1: Tulis dalam Bentuk Matriks Augmented
-Bentuk matriks augmented dari sistem ini adalah:
 
 $$
 \begin{bmatrix}
@@ -30,9 +29,9 @@ $$
 2&4&6&|12\\
 0&1&1&|2
 \end{bmatrix}
+$$
 
 Langkah 2: Eliminasi Baris
-Kita akan menghilangkan elemen di bawah elemen utama di kolom pertama. Gunakan operasi:
 
 $$
 \begin{array}{cc}
@@ -50,8 +49,7 @@ $$
 \end{bmatrix}
 $$
 
-Langkah 3: Interpretasi
-Baris kedua dirubah menjadi *0 = 0*
+Langkah 3: Baris kedua dirubah menjadi *0 = 0*
 
 $$
 \begin{aligned}
@@ -60,8 +58,7 @@ x_2+x_3&=2
 \end{aligned}
 $$
 
-Langkah 4: Substitusi
-Dari persamaan kedua:
+Langkah 4: Substitusi dari persamaan kedua:
 
 $$
 \begin{array}{cc}
@@ -80,8 +77,7 @@ x_1=&2-x_3
 \end{array}
 $$
 
-Kesimpulan
-Solusi umum dari sistem ini adalah:
+Kesimpulan : 
 
 $$
 \begin{aligned}
@@ -114,7 +110,6 @@ $$
 $$
 
 Langkah 2: Eliminasi Baris
-Kita akan menghilangkan elemen di bawah elemen utama di kolom pertama.
 
 $$
 \begin{array}{cc}
@@ -174,8 +169,7 @@ $$
 \end{bmatrix}
 $$
 
-Langkah 3: Substitusi Balik*
-Dari baris ketiga:
+Langkah 3: Substitusi Balik dari baris ketiga : 
 
 $$
 \begin{array}{cc}
@@ -235,8 +229,7 @@ x_1=3-\frac{2}{3}=\frac{9}{3}-\frac{2}{3}=\frac{7}{3}
 \end{array}
 $$
 
-Kesimpulan
-Jadi, solusi dari sistem persamaan adalah:
+Kesimpulan : 
 
 $$
 \begin{aligned}
