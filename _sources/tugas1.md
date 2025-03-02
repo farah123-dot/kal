@@ -81,8 +81,8 @@ R_2 \rightarrow R_2 - 2R_1
 Sehingga:
 
 \begin{bmatrix}
-1 & 2 & 3 & | 6 \\
-0 & 0 & 0 & | 0 \\
+1 & 2 & 3 & | 6\\
+0 & 0 & 0 & | 0\\
 0 & 1 & 1 & | 2
 \end{bmatrix}
 
