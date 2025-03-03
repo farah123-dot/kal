@@ -63,12 +63,13 @@ Penyelesaian
 Langkah 1: Tulis dalam Bentuk Matriks Augmented
 Bentuk matriks augmented dari sistem ini adalah:
 
+$$
 \begin{bmatrix}
 1 & 2 & 3 & | 6 \\
 2 & 4 & 6 & | 12 \\
 0 & 1 & 1 & | 2
 \end{bmatrix}
-
+$$
 
 Langkah 2: Eliminasi Baris
 Kita akan menghilangkan elemen di bawah elemen utama di kolom pertama. Gunakan operasi:
@@ -80,11 +81,13 @@ R_2 \rightarrow R_2 - 2R_1
 
 Sehingga:
 
+$$
 \begin{bmatrix}
 1 & 2 & 3 & | 6\\
 0 & 0 & 0 & | 0\\
 0 & 1 & 1 & | 2
 \end{bmatrix}
+$$
 
 Langkah 3: Interpretasi
 Baris kedua dirubah menjadi *0 = 0*
@@ -122,6 +125,7 @@ x_3 & = x_3
 
 ### Contoh Soal 2 
 Selesaikan dengan menggunakan eliminasi gauss
+
 $$
 \begin{array}{cc}
 x_1+x_2+x_3&=3\\
