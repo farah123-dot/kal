@@ -225,8 +225,7 @@ Dari baris kedua:
 $$
 \begin{array}{cc}
 x_2 + \frac{1}{2} x_3 = \frac{1}{2}
-\
-end{array}
+\end{array}
 $$
 
 $$
