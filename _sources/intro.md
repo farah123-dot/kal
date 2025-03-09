@@ -52,7 +52,7 @@ a. Sistem persamaan linier memiliki banyak penyelesaian jika koefisien dan konst
 
 b. Secara geometris, kedua persamaan menggambarkan garis yang berhimpit, sehingga setiap titik pada garis tersebut merupakan solusi.
 
-<iframe scrolling="no" title="Example of a Type 1 System with a UNIQUE SOLUTION" src="https://www.geogebra.org/material/iframe/id/FRUTadWV/width/700/height/500/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="700px" height="500px" style="border:0px;"> </iframe>
+<iframe scrolling="no" title="Types of solutions to systems of linear equations" src="https://www.geogebra.org/material/iframe/id/yFrWprjR/width/553/height/546/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="553px" height="546px" style="border:0px;"> </iframe>
 
 ## Eliminasi
 Eliminasi adalah metode penyelesaian sistem persamaan linear dengan cara menghilangkan salah satu variabel.Dimana metode eliminasi secara garis besar akan menghapus atau menghilangkan satu variabel dalam persamaan tersebut. Metode ini dapat digunakan untuk menyelesaikan sistem persamaan linear dua variabel maupun tiga variabel.
