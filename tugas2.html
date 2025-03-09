@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Sistem Persamaan Linier &#8212; KAL</title>
+    <title>Matrik &#8212; KAL</title>
   
   
   
@@ -59,10 +59,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Penyelesaian Sistem Persamaan Linier" href="tugas1.html" />
+    <link rel="prev" title="Penyelesaian Sistem Persamaan Linier" href="tugas1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -145,7 +143,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -176,15 +174,15 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Sistem Persamaan Linier
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="tugas1.html">Penyelesaian Sistem Persamaan Linier</a></li>
-<li class="toctree-l1"><a class="reference internal" href="tugas2.html">Matrik</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Matrik</a></li>
 </ul>
 
     </div>
@@ -256,7 +254,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas2.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -286,7 +284,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/tugas2.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +294,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -370,7 +368,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Sistem Persamaan Linier</h1>
+    <h1>Matrik</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -380,13 +378,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pengertian-ciri-ciri-dan-jenis-jenis-sistem-persamaan-linier">A. Pengertian, Ciri - Ciri dan Jenis - Jenis Sistem Persamaan Linier <br/></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-solusi-penyelesaian-sistem-persamaan-linier">B. Solusi Penyelesaian Sistem Persamaan Linier</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi">Eliminasi</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gaus">Eliminasi Gaus</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-grafik">Solusi Grafik</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-matrik">Definisi Matrik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-artimatika-matrik">Operasi Artimatika Matrik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan">Penjumlahan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-penjumlahan-matrik">Konsep Penjumlahan Matrik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matrik">Perkalian Matrik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-perkalian-matrik">Konsep Perkalian Matrik</a></li>
 </ul>
             </nav>
         </div>
@@ -398,105 +395,147 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="sistem-persamaan-linier">
-<h1>Sistem Persamaan Linier<a class="headerlink" href="#sistem-persamaan-linier" title="Link to this heading">#</a></h1>
-<section id="a-pengertian-ciri-ciri-dan-jenis-jenis-sistem-persamaan-linier">
-<h2>A. Pengertian, Ciri - Ciri dan Jenis - Jenis Sistem Persamaan Linier <br><a class="headerlink" href="#a-pengertian-ciri-ciri-dan-jenis-jenis-sistem-persamaan-linier" title="Link to this heading">#</a></h2>
+  <section id="matrik">
+<h1>Matrik<a class="headerlink" href="#matrik" title="Link to this heading">#</a></h1>
+<section id="definisi-matrik">
+<h2>Definisi Matrik<a class="headerlink" href="#definisi-matrik" title="Link to this heading">#</a></h2>
+<p>Matrik adalah susunan bilangan real atau bilangan kompleks (atau elemen-elemen) yang disusun dalam baris dan kolom sehingga membentuk jajaran persegi panjang. Matrik disusun berdasarkan baris dan kolom, serta ditempatkan di dalam tanda kurung. Ukuran matrik ditentukan oleh jumlah baris dan kolom yang dikandungnya.</p>
+<p>Matrik diberi nama dengan huruf kapital dan anggotannya dinyatakan dengan huruf kecil. Banyaknya baris dan kolom suatu matriks disebut ordo. Berikut adalah beberapa contoh matrik.</p>
 <ol class="arabic simple">
-<li><p>Definis Sistem Persamaan Linier
-Sitem Persamaan Linier adalah variabel yang mempuyai pangkat satu atau tidak lebih dan tidak mempunyai akar. Sistem Persamaan Linier bisa di artikan sebagai suatu persamaan aljabar.</p></li>
-<li><p>Ciri-ciri Sistem Persamaan Linier</p></li>
+<li><p>Matrik 4 x4</p></li>
 </ol>
-<ul class="simple">
-<li><p>Variabelnya hanya memiliki pangkat satu dan tidak lebih (tidak memiliki pangkat)</p></li>
-<li><p>Variabelnya tidak memiliki akar</p></li>
-</ul>
-<ol class="arabic simple" start="3">
-<li><p>Jenis-jenis Sistem Persamaan Linier</p></li>
-</ol>
-<ul class="simple">
-<li><p>Persamaan Linier Satu Variabel
-Persamaan linier satu variabel adalah persamaan linier yang hanya memiliki satu variabel saja, contohnya</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">+</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Persamaan Linier Dua Variabel
-Persamaan linier dua variabel adalah persamaan linier yang memiliki dua variabel, contohnya</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">+</span> <span class="n">by</span> <span class="o">+</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">0</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Persamaan Linier Tiga Variabel
-Persamaan linier tiga variabel adalah persamaan linier yang memiliki tiga variabel, contohnya</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">+</span> <span class="n">by</span> <span class="o">+</span> <span class="n">cz</span> <span class="o">=</span><span class="mi">0</span>
-</pre></div>
-</div>
-</section>
-<section id="b-solusi-penyelesaian-sistem-persamaan-linier">
-<h2>B. Solusi Penyelesaian Sistem Persamaan Linier<a class="headerlink" href="#b-solusi-penyelesaian-sistem-persamaan-linier" title="Link to this heading">#</a></h2>
-<p>Berikut adalah beberapa solusi penyelesaian sistem persamaan linier.</p>
-<ol class="arabic simple">
-<li><p>Penyelesaian Tunggal
-Sistem persamaan linier dengan penyelesaian tunggal terjadi ketika persamaan-persamaan dalam sistem tersebut saling berpotongan di satu titik saja.</p></li>
-</ol>
-<ul class="simple">
-<li><p>Syarat penyelesaian tunggal sebagai berikut :
-Determinan matriks koefisien atau tidak nol.</p></li>
-<li><p>Cara menyelesaikannya :
-a. Metode Eliminasi : menghilangkan salah satu variabel dengan menjumlahkan atau mengurangkan kedua persamaan.
-b. Metode Subtitusi : memecahkan salah satu persamaan untuk satu variabel, lalu mensubtituskannya ke persamaan lain.
-c. Metode Matriks : menggunakan invers matriks koefisien untuk mencari nilai variabel.</p></li>
-</ul>
-<iframe scrolling="no" title="penyelesaian tunggal" src="https://www.geogebra.org/material/iframe/id/peerrkyt/width/1536/height/631/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1536px" height="631px" style="border:0px;"> </iframe>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{split}
+A = \left[ \begin{array}{rrrr}
+1 &amp; 8 &amp; 9 &amp; 4 \\
+2 &amp; 7 &amp; -1 &amp; -3 \\
+2 &amp; 6 &amp; 2 &amp; 5 \\
+4 &amp; 5 &amp; 3 &amp; -2  \\
+\end{array}\right]
+\end{split}
+\end{split}\]</div>
 <ol class="arabic simple" start="2">
-<li><p>Tidak ada penyelesaian
-Sistem persamaan linier tidak memiliki penyelesaian jika persamaan - persamaan daldam sistem tersebut merepretasikan garis-garis yang paralel dan tidak berpotongan.</p></li>
+<li><p>Matrik 3 x 2</p></li>
 </ol>
-<ul class="simple">
-<li><p>Syarat tidak ada penyelesaian :
-Sistem persamaan linier tidak memiliki penyelesaian jika determinan koefisien nol, tetapi konstanta pada ruas kanan tidak sebanding dengan koefisien variabel.</p></li>
-</ul>
-<iframe scrolling="no" title="tidak ada penyelesaian" src="https://www.geogebra.org/material/iframe/id/tfahwvyd/width/1536/height/631/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1536px" height="631px" style="border:0px;"> </iframe>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{split}
+B = \left[ \begin{array}{rrrr}
+3 &amp; 9 \\
+5 &amp; 3 \\
+7 &amp; 1 \\
+\end{array}\right]
+\end{split}
+\end{split}\]</div>
 <ol class="arabic simple" start="3">
-<li><p>Banyak penyelesaian
-Sistem persamaan linier memiliki banyak penyelesaian jika persamaan - persamaan dalam sistem tersebut merepresentasikan garis yang sama.</p></li>
+<li><p>Matrik 2 x 2</p></li>
 </ol>
-<ul class="simple">
-<li><p>Syarat banyak penyelesaian :
-a. Sistem persamaan linier memiliki banyak penyelesaian jika koefisien dan konstanta sebanding.
-b. Secara geometris, kedua persamaan menggambarkan garis yang berhimpit, sehingga setiap titik pada garis tersebut merupakan solusi.</p></li>
-</ul>
-<iframe scrolling="no" title="terdapat banyak penyelesaian" src="https://www.geogebra.org/material/iframe/id/cpqyuqwh/width/1536/height/631/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1536px" height="631px" style="border:0px;"> </iframe>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{split}
+C = \left[ \begin{array}{rrrr}
+-1 &amp; 9 \\
+3 &amp; 5 \\
+\end{array}\right]
+\end{split}
+\end{split}\]</div>
+<ol class="arabic simple" start="4">
+<li><p>Matrik 2 x 3</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{split}
+D = \left[ \begin{array}{rrrr}
+-2 &amp; 8 &amp; 3 \\
+-3 &amp; 9 &amp; 7 \\
+\end{array}\right]
+\end{split}
+\end{split}\]</div>
 </section>
-<section id="eliminasi">
-<h2>Eliminasi<a class="headerlink" href="#eliminasi" title="Link to this heading">#</a></h2>
-<p>Eliminasi adalah metode penyelesaian sistem persamaan linear dengan cara menghilangkan salah satu variabel.Dimana metode eliminasi secara garis besar akan menghapus atau menghilangkan satu variabel dalam persamaan tersebut. Metode ini dapat digunakan untuk menyelesaikan sistem persamaan linear dua variabel maupun tiga variabel.</p>
-<p>Langkah-langkah metode eliminasi yaitu :
-a. Tentukan variabel yang akan dieliminasi
-b. Samakan koefisien variabel yang akan dieliminasi
-c. Jumlahkan atau kurangkan persamaan-persamaan untuk mengeliminasi variabel yang ditentukan
-d. Gunakan persamaan yang baru untuk mencari nilai variabel yang belum diketahui</p>
-<section id="eliminasi-gaus">
-<h3>Eliminasi Gaus<a class="headerlink" href="#eliminasi-gaus" title="Link to this heading">#</a></h3>
-<p>Eliminasi Gauss adalah metode untuk menyelesaikan sistem persamaan linear (SPL) dengan mengubah persamaan menjadi matriks. Metode ini ditemukan oleh matematikawan Jerman Carl Friedrich Gauss (1777-1855). Tujuan utamanya adalah untuk mempermudah proses substitusi mundur dalam mencari solusi persamaan. Eliminasi Gauss dapat digunakan untuk menentukan determinan matriks tanpa memiliki suatu persyaratan.</p>
+<section id="operasi-artimatika-matrik">
+<h2>Operasi Artimatika Matrik<a class="headerlink" href="#operasi-artimatika-matrik" title="Link to this heading">#</a></h2>
+<p>Operasi aritmatika matrik adalah serangkaian operasi matematika yang dilakukan pada matrik meliputi penjumlahan, pengurangan, perkalian, perkalian dengan skalar.</p>
 </section>
-<section id="solusi-grafik">
-<h3>Solusi Grafik<a class="headerlink" href="#solusi-grafik" title="Link to this heading">#</a></h3>
-<p>Solusi grafik pada sistem persamaan linear adalah titik perpotongan kedua garis yang digambar dalam sistem koordinat yang sama.</p>
-<p>Berikut langkah-langkah menyelesaikan sistem persamaan linear dengan metode grafik :
-a. Gambarkan kedua persamaan dalam sistem koordinat yang sama.
-b. Tentukan titik potong salah satu persamaan linear dengan sumbu X atau sumbu Y.
-c. Hubungkan kedua titik potong dengan garis lurus.
-d. Lakukan langkah 1 dan 2 untuk persamaan lain.
-e. Jika kedua garis berpotongan di (x,y) = (x1, y1), penyelesaian SPLD adalah x=x1 dan y=y1.</p>
-<iframe scrolling="no" title="Solving Linear Systems by Graphing: REVAMPED" src="https://www.geogebra.org/material/iframe/id/vyxxahhq/width/824/height/529/border/888888/sfsb/true/smb/false/stb/true/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="824px" height="529px" style="border:0px;"> </iframe></section>
+<section id="penjumlahan">
+<h2>Penjumlahan<a class="headerlink" href="#penjumlahan" title="Link to this heading">#</a></h2>
+<p>Penjumlahan matrik adalah operasi antara dua matrik yang memiliki dimensi yang sama yaitu jumlah baris dan kolomnya harus sama. Operasi penjumlahan dilakukan dengan menjumlahkan elemen-elemen yang sesuai dari kedua matrik.</p>
 </section>
-<div class="toctree-wrapper compound">
+<section id="konsep-penjumlahan-matrik">
+<h2>Konsep Penjumlahan Matrik<a class="headerlink" href="#konsep-penjumlahan-matrik" title="Link to this heading">#</a></h2>
+<p>Berikut contoh penjumlahan matrik.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">9</span><span class="p">,</span><span class="mi">1</span><span class="p">]))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(([</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">],[</span><span class="mi">8</span><span class="p">,</span><span class="mi">2</span><span class="p">]))</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">add</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hasil : &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2 3]
+ [9 1]]
+
+[[5 7]
+ [8 2]]
+
+hasil : 
+[[ 7 10]
+ [17  3]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="perkalian-matrik">
+<h2>Perkalian Matrik<a class="headerlink" href="#perkalian-matrik" title="Link to this heading">#</a></h2>
+<p>Perkalian matrik adalah nilai pada matrik yang bisa dihasilkan dengan cara dikalikan-nya tiap baris degan kolom yang memiliki jumlah baris yang sama. Operasi ini melibatkan perkalian elemen-elemen matrik. Untuk melakukan perkalian matrik A dan B, jumlah kolom dalam matrik A harus sama dengan jumlah baris dalam matrik B.</p>
+</section>
+<section id="konsep-perkalian-matrik">
+<h2>Konsep Perkalian Matrik<a class="headerlink" href="#konsep-perkalian-matrik" title="Link to this heading">#</a></h2>
+<p>Berikut contoh perkalian matrik.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(([</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]))</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hasil : &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+
+[[9 8 7]
+ [6 5 4]
+ [3 2 1]]
+
+hasil : 
+[[ 30  24  18]
+ [ 84  69  54]
+ [138 114  90]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -529,14 +568,14 @@ e. Jika kedua garis berpotongan di (x,y) = (x1, y1), penyelesaian SPLD adalah x=
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
+    <a class="left-prev"
        href="tugas1.html"
-       title="next page">
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Penyelesaian Sistem Persamaan Linier</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -554,13 +593,12 @@ e. Jika kedua garis berpotongan di (x,y) = (x1, y1), penyelesaian SPLD adalah x=
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pengertian-ciri-ciri-dan-jenis-jenis-sistem-persamaan-linier">A. Pengertian, Ciri - Ciri dan Jenis - Jenis Sistem Persamaan Linier <br/></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-solusi-penyelesaian-sistem-persamaan-linier">B. Solusi Penyelesaian Sistem Persamaan Linier</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi">Eliminasi</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gaus">Eliminasi Gaus</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-grafik">Solusi Grafik</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-matrik">Definisi Matrik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-artimatika-matrik">Operasi Artimatika Matrik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan">Penjumlahan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-penjumlahan-matrik">Konsep Penjumlahan Matrik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matrik">Perkalian Matrik</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-perkalian-matrik">Konsep Perkalian Matrik</a></li>
 </ul>
   </nav></div>
 
