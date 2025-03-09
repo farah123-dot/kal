@@ -30,26 +30,29 @@ Sistem persamaan linier dengan penyelesaian tunggal terjadi ketika persamaan-per
 * Syarat penyelesaian tunggal sebagai berikut : 
 Determinan matriks koefisien atau tidak nol. 
 * Cara menyelesaikannya : 
+
 a. Metode Eliminasi : menghilangkan salah satu variabel dengan menjumlahkan atau mengurangkan kedua persamaan. 
+
 b. Metode Subtitusi : memecahkan salah satu persamaan untuk satu variabel, lalu mensubtituskannya ke persamaan lain. 
+
 c. Metode Matriks : menggunakan invers matriks koefisien untuk mencari nilai variabel.
 
-<iframe scrolling="no" title="penyelesaian tunggal" src="https://www.geogebra.org/material/iframe/id/peerrkyt/width/1536/height/631/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1536px" height="631px" style="border:0px;"> </iframe>
 
 2. Tidak ada penyelesaian 
 Sistem persamaan linier tidak memiliki penyelesaian jika persamaan - persamaan daldam sistem tersebut merepretasikan garis-garis yang paralel dan tidak berpotongan.
 * Syarat tidak ada penyelesaian :
 Sistem persamaan linier tidak memiliki penyelesaian jika determinan koefisien nol, tetapi konstanta pada ruas kanan tidak sebanding dengan koefisien variabel.
 
-<iframe scrolling="no" title="tidak ada penyelesaian" src="https://www.geogebra.org/material/iframe/id/tfahwvyd/width/1536/height/631/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1536px" height="631px" style="border:0px;"> </iframe>
 
 3. Banyak penyelesaian 
 Sistem persamaan linier memiliki banyak penyelesaian jika persamaan - persamaan dalam sistem tersebut merepresentasikan garis yang sama.
 * Syarat banyak penyelesaian : 
+
 a. Sistem persamaan linier memiliki banyak penyelesaian jika koefisien dan konstanta sebanding. 
+
 b. Secara geometris, kedua persamaan menggambarkan garis yang berhimpit, sehingga setiap titik pada garis tersebut merupakan solusi.
 
-<iframe scrolling="no" title="terdapat banyak penyelesaian" src="https://www.geogebra.org/material/iframe/id/cpqyuqwh/width/1536/height/631/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1536px" height="631px" style="border:0px;"> </iframe>
+<iframe scrolling="no" title="Example of a Type 1 System with a UNIQUE SOLUTION" src="https://www.geogebra.org/material/iframe/id/FRUTadWV/width/700/height/500/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/false/ctl/false" width="700px" height="500px" style="border:0px;"> </iframe>
 
 ## Eliminasi
 Eliminasi adalah metode penyelesaian sistem persamaan linear dengan cara menghilangkan salah satu variabel.Dimana metode eliminasi secara garis besar akan menghapus atau menghilangkan satu variabel dalam persamaan tersebut. Metode ini dapat digunakan untuk menyelesaikan sistem persamaan linear dua variabel maupun tiga variabel.
