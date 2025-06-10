@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Penyelesaian Sistem Persamaan Linier &#8212; KAL</title>
+    <title>Cross Product &#8212; KAL</title>
   
   
   
@@ -59,11 +59,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'tugas1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'CrossProduct';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Matrik" href="jawab.html" />
-    <link rel="prev" title="Sistem Persamaan Linier" href="intro.html" />
+    <link rel="prev" title="Perkalian Titik (Dot Product)" href="Dot_Product.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,7 +181,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Penyelesaian Sistem Persamaan Linier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tugas1.html">Penyelesaian Sistem Persamaan Linier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jawab.html">Matrik</a></li>
 
 
@@ -195,7 +194,7 @@
 
 <li class="toctree-l1"><a class="reference internal" href="eigen.html">Eigenvalues dan Eigenvektor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Dot_Product.html">Perkalian Titik (Dot Product)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CrossProduct.html">Cross Product</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Cross Product</a></li>
 </ul>
 
     </div>
@@ -267,7 +266,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugas1.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FCrossProduct.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -297,7 +296,7 @@
       
       
       
-      <li><a href="_sources/tugas1.md" target="_blank"
+      <li><a href="_sources/CrossProduct.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -307,7 +306,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -381,7 +380,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Penyelesaian Sistem Persamaan Linier</h1>
+    <h1>Cross Product</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -391,15 +390,19 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris-elementer">Operasi Baris Elementer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gauss">Eliminasi Gauss</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bentuk-eselon-baris">Bentuk Eselon Baris</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi">Definisi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-hasil-kali-silang">Contoh Hasil Kali Silang</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-perkalian-silang">Determinan Perkalian Silang</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-perkalian-silang">Sifat-sifat Perkalian Silang</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-cross-product">Implementasi Cross Product</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latihan-soal">Latihan Soal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jawaban">Jawaban</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1">Soal 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-2">Soal 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-3">Soal 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-4">Soal 4</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-1">Contoh Soal 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-2">Contoh Soal 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-3">Contoh Soal 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-4">Contoh Soal 4</a></li>
 </ul>
             </nav>
         </div>
@@ -411,423 +414,439 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="penyelesaian-sistem-persamaan-linier">
-<h1>Penyelesaian Sistem Persamaan Linier<a class="headerlink" href="#penyelesaian-sistem-persamaan-linier" title="Link to this heading">#</a></h1>
-<section id="operasi-baris-elementer">
-<h2>Operasi Baris Elementer<a class="headerlink" href="#operasi-baris-elementer" title="Link to this heading">#</a></h2>
-<p>Operasi Baris Elementer adalah operasi yang dilakukan pada baris-baris suatu matriks untuk mempermudah proses penyelesaian system persamaan linier atau manipulasi matriks. Operasi ini digunakan dalam metode eliminasi Gauss dan Gauss-Jordan untuk mengubah matriks menjadi bentuk yang lebih sederhana, seperti matriks eselon baris atau matriks identifikasi. Tujuan utama dari OBE adalah untuk menyederhanakan matriks, terutama dalam menyelesaikan sistem persamaan linier, mencari invers matriks, atau menentukan rank matriks. OBE tidak mengubah solusi dari sistem persamaan linier yang direpresentasikan oleh matriks tersebut.</p>
-<p>Jenis-Jenis Operasi Baris Elementer (OBE)</p>
-<ol class="arabic simple">
-<li><p>Pertukaran baris
-Operasi ini menukarkan posisi dua baris dalam matriks.</p></li>
-<li><p>Perkalian baris dnegan konstanta bukan Nol
-Operasi ini mengalikan semua elemen dalam suatu baris dengan konstanta bukan nol</p></li>
-</ol>
-<p>Ciri-Ciri Baris Elementer</p>
-<ol class="arabic simple">
-<li><p>Tidak mengubah solusi sistem persamaan linier
-Operasi ini hanya mengubah bentuk sistem tanpa mengubah solusi dari sistem tersebut.</p></li>
-<li><p>Dapat digunakan untuk menyederhanakan matriks
-Berguna dalam mencari invers matriks, menyelesaikan sistem persamaan linier, dan menentukan determinan.</p></li>
-<li><p>Operasi bersifat reversibel (dapat dibalik)
-a. Pertukaran daua baris dapat dikembalikan dengan pertukaran yang sama.
-b. Penjumlahan dengan kelipatan baris lain dapat dikembalikan dengan operasi sebaliknya.</p></li>
-</ol>
-<p>Contoh Penggunaan Operasi Baris Elementer</p>
-<ol class="arabic simple">
-<li><p>Contoh Penggunaan dalam Eliminasi Gauss
-a. Digunakan untuk mencari elemen utama (pivot) di setiap kolom.
-b. Menggunakan OBE untuk membuat semua elemen di bawah pivot menjadi nol.
-c. Melanjutkan proses ini untuk kolom-kolom berikutnya.</p></li>
-<li><p>Contoh penggunaan dalam eliminasi Gauss Jordan
-Eliminasi Gauss Jordan adalah variasi dari eliminasi Gauss yang lebih lanjut mengubah matriks menjadi bentuk eleson baris tereduksi. Dalam bentuk ini, semua elemen di aats dan di bawah pivot adalh nol, dan smeu pivot adalah 1.</p></li>
-</ol>
+  <section class="tex2jax_ignore mathjax_ignore" id="cross-product">
+<h1>Cross Product<a class="headerlink" href="#cross-product" title="Link to this heading">#</a></h1>
+<section id="definisi">
+<h2>Definisi<a class="headerlink" href="#definisi" title="Link to this heading">#</a></h2>
+<p>Misalkan
+<span class="math notranslate nohighlight">\(
+\vec{u} =
+\begin{vmatrix}
+u_1\\
+u_2\\
+u_3\\
+\end{vmatrix}
+\)</span>
+dan
+<span class="math notranslate nohighlight">\(
+\vec{v} =
+\begin{vmatrix}
+v_1\\
+v_2\\
+v_3\\
+\end{vmatrix}
+\)</span>
+adalah vektor-vektor di
+<span class="math notranslate nohighlight">\(
+R_3
+\)</span></p>
+<p>Maka akan menghasilkan rumus
+<span class="math notranslate nohighlight">\(
+\vec{u} \times \vec{v} =
+\begin{vmatrix}
+u_2v_3 - u_3v_2\\
+-(u_1v_3 - u_3v_1)\\
+u_1v_2 - u_2v_1\\
+\end{vmatrix}
+\)</span></p>
 </section>
-<section id="eliminasi-gauss">
-<h2>Eliminasi Gauss<a class="headerlink" href="#eliminasi-gauss" title="Link to this heading">#</a></h2>
-<p>Metode Eliminasi Gauss dikembangkan oleh Carl Friedrich Gauss (1777-1855). Carl adalah matematikawan berkebangsaan Jerman yang berkontribusi dalam geometri, teori bilangan, fungsi, dan teori probabilitas.</p>
-<p>Eliminasi Gauss adalah sebuah algoritma dalam aljabar untuk menyelesaikan sistem persamaan linier. Metode ini bekerja dengan mengubah sistem persamaan linier manjeadi bentuk matriks eselon baris (row echelon form) atau matriks eselon baris tereduksi (reduced row echelon form) melalui serangkaian operasi baris elementer. Bentuk eslon ini memudahkan kita untuk menemukan solusi dari sistem persamaan tersebut.</p>
-<section id="bentuk-eselon-baris">
-<h3>Bentuk Eselon Baris<a class="headerlink" href="#bentuk-eselon-baris" title="Link to this heading">#</a></h3>
-<p>Suatu matriks memiliki eselon baris jika memenuhi 3 kriteria berikut :</p>
-<ol class="arabic simple">
-<li><p>Jika didalam baris terdapat elemen-elemen yang tidak semuanya 0, maka bilangan tak nol pertama di dalam baris tersebut adalah 1.</p></li>
-<li><p>Kalau terdapat baris-baris yang semua elemennya bernilai 0 semua, maka baris-baris tersebut harus dikelompokkan dan diletakkan dibagian bawah matriks.</p></li>
-<li><p>Jika terdapat dua barais berurutan yang memenuhi kriteria pertama, maka angka 1 dari baris yang lebih rendah ke kanan dari angka 1 baris yang diatasnya.</p></li>
-</ol>
-<p>Terdapat 3 operasi yang dapat dilakukan</p>
-<ol class="arabic simple">
-<li><p>Tukarkan posisi kedua persamaan.</p></li>
-<li><p>Kalikan persamaan dengan bilangan apa pun yang bukan nol.</p></li>
-<li><p>Gantikan suatu persamaan dengan jumlah persamaan itu sendiri dan kelipatan persamaan lainnya.</p></li>
-</ol>
-<p>Langkah - Langkah Eliminasi Gauss</p>
-<ol class="arabic simple">
-<li><p>Representasi Matriks : Ubah sistem persamaan linier menjadi bentuk matriks augmented. Matriks augmented terdiri dari matrik koefisien dari variabel dan matriks kolom konstanta.</p></li>
-<li><p>Operasi Baris Elementer : Lakukan operasi baris elementer untuk mengubah matriks menjadi eselon baris.</p></li>
-<li><p>Membuat Nol dibawah dialog utama : Gunakan operasi baris elementer untuk membuat semua elemen di bawah dialog utama matriks menjadi nol. Ini akan menghasilkan matriks eselon baris.</p></li>
-<li><p>Back Subtitution (Subtitusi Balik) : Setelah mendapatkan matriks eselon baris, gunakan substitusi balik untuk menemukan nilai variabel.</p></li>
-</ol>
+<section id="contoh-hasil-kali-silang">
+<h2>Contoh Hasil Kali Silang<a class="headerlink" href="#contoh-hasil-kali-silang" title="Link to this heading">#</a></h2>
+<p>Misalkan
+<span class="math notranslate nohighlight">\(
+\vec{u} =
+\begin{vmatrix}
+u_1\\
+u_2\\
+u_3\\
+\end{vmatrix}
+\)</span>
+dan
+<span class="math notranslate nohighlight">\(
+\vec{v} =
+\begin{vmatrix}
+v_1\\
+v_2\\
+v_3\\
+\end{vmatrix}
+\)</span>.
+Temukan
+<span class="math notranslate nohighlight">\(
+\vec{u} \times \vec{v}
+\begin{array}{cc}
+\end{array}
+\)</span>
+<span class="math notranslate nohighlight">\(
+\begin{array}{cc}
+\end{array}
+\)</span>,
+dan verifikasi bahwa hasil kali silang ini tegak lurus terhadap baik
+<span class="math notranslate nohighlight">\(
+\vec{u}
+\begin{array}{cc}
+\end{array}
+\)</span>
+maupun
+<span class="math notranslate nohighlight">\(
+\vec{v}
+\begin{array}{cc}
+\end{array}
+\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{u} \times \vec{v} =
+\begin{vmatrix}
+-(1)(5) - (4)(2) \\
+-((2)(5) - (4)(3)) \\
+(2)(2) - -(1)(3) \\
+\end{vmatrix}
+\end{split}\]</div>
+<p>Solusi
+<span class="math notranslate nohighlight">\(
+\begin{matrix}
+    \vec{u} \times \vec{v} = \begin{vmatrix}
+      -13\\
+      2\\
+      7\\
+\end{vmatrix}
+\end{matrix}
+\)</span></p>
 </section>
+<section id="determinan-perkalian-silang">
+<h2>Determinan Perkalian Silang<a class="headerlink" href="#determinan-perkalian-silang" title="Link to this heading">#</a></h2>
+<p>Jika dua vektor diberikan sebagai:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{a} = \begin{bmatrix} a_1 \\ a_2 \\ a_3 \end{bmatrix}, \quad
+\vec{b} = \begin{bmatrix} b_1 \\ b_2 \\ b_3 \end{bmatrix}
+\end{split}\]</div>
+<p>Maka hasil perkalian silang adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{a} \times \vec{b} =
+\begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+a_1 &amp; a_2 &amp; a_3 \\
+b_1 &amp; b_2 &amp; b_3 \\
+\end{vmatrix}
+= \left( a_2 b_3 - a_3 b_2 \right) \mathbf{i}
+- \left( a_1 b_3 - a_3 b_1 \right) \mathbf{j}
++ \left( a_1 b_2 - a_2 b_1 \right) \mathbf{k}
+\end{split}\]</div>
+<p>Perhitungan ini menggunakan determinan matriks <span class="math notranslate nohighlight">\(3 \times 3\)</span> dan menghasilkan vektor di <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p>
 </section>
-<section id="contoh-soal-1">
-<h2>Contoh Soal 1<a class="headerlink" href="#contoh-soal-1" title="Link to this heading">#</a></h2>
-<p>Selesaikan dengan menggunakan eleminasi gauss</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{array}{cc}
-x_1+2x_2+3x_3&amp;=6\\
-2x_1+4x_2+6x_3&amp;=12\\
-x_3+x_2&amp;=2
-\end{array}
-\end{split}\]</div>
-<p>Penyelesaian
-Langkah 1: Tulis dalam Bentuk Matriks Augmented
-Bentuk matriks augmented dari sistem ini adalah:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; | 6 \\
-2 &amp; 4 &amp; 6 &amp; | 12 \\
-0 &amp; 1 &amp; 1 &amp; | 2
-\end{bmatrix}
-\end{split}\]</div>
-<p>Langkah 2: Eliminasi Baris
-Kita akan menghilangkan elemen di bawah elemen utama di kolom pertama. Gunakan operasi:</p>
-<p>\begin{array}{cc}
-R_2 \rightarrow R_2 - 2R_1
-\end{array}</p>
-<p>Sehingga:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix}
-1&amp;2&amp;3&amp;|6\\
-0&amp;0&amp;0&amp;|0\\
-0&amp;1&amp;1&amp;|2
-\end{bmatrix}
-\end{split}\]</div>
-<p>Langkah 3: Interpretasi
-Baris kedua dirubah menjadi <em>0 = 0</em></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-x_1+2x_2+3x_3&amp;=6\\
-x_2+x_3&amp;=2
-\end{aligned}
-\end{split}\]</div>
-<p>Langkah 4: Substitusi
-Dari persamaan kedua:</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{array}{cc}
-x_2 = 2 - x_3
-\end{array}
-\]</div>
-<p>Substitusikan ke persamaan pertama:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{array}{cc}
-x_1+2(2-x_3)+3x_3&amp;=6\\
-x_1+4-2x_3+3x_3&amp;=6\\
-x_1+4+x_3&amp;=6\\
-x_1=&amp;2-x_3
-\end{array}
-\end{split}\]</div>
-<p>Kesimpulan
-Solusi umum dari sistem ini adalah:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-x_1&amp;=2-x _ 3\\
-x_2&amp;=2-x _ 3\\
-x_3&amp;=x_3
-\end{aligned}
-\end{split}\]</div>
-</section>
-<section id="contoh-soal-2">
-<h2>Contoh Soal 2<a class="headerlink" href="#contoh-soal-2" title="Link to this heading">#</a></h2>
-<p>Selesaikan dengan menggunakan eliminasi gauss</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{array}{cc}
-x_1+x_2+x_3&amp;=3\\
-2x_1+x_3&amp;=5\\
-x_1+2x_2&amp;=3
-\end{array}
-\end{split}\]</div>
-<p>Penyelesaian
-Langkah 1: Tulis dalam Bentuk Matriks Augmented</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix}
-1&amp;1&amp;1&amp;|3\\
-2&amp;0&amp;1&amp;|5\\
-1&amp;2&amp;0&amp;|3
-\end{bmatrix}
-\end{split}\]</div>
-<p>Langkah 2: Eliminasi Baris
-Kita akan menghilangkan elemen di bawah elemen utama di kolom pertama.</p>
-<p>\begin{array}{cc}
-R_2 \rightarrow R_2 - 2R_1
-\end{array}</p>
-<p>\begin{array}{cc}
-R_3 \rightarrow R_3 - R_1
-\end{array}</p>
-<p>Sehingga matriks berubah menjadi:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix}
-1&amp;1&amp;1&amp;|3\\
-0&amp;-2&amp;-1&amp;|-1\\
-0&amp;1&amp;-1&amp;|0
-\end{bmatrix}
-\end{split}\]</div>
-<p>Selanjutnya, buat elemen utama di baris kedua menjadi 1 dengan membagi baris kedua dengan -2:</p>
-<p>\begin{array}{cc}
-R_2 \rightarrow \frac{R_2}{-2}
-\end{array}</p>
-<p>Hasilnya:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix}
-1&amp;1&amp;1&amp;|3\\
-0&amp;1&amp;\frac{1}{2}&amp;|\frac{1}{2}\\
-0&amp;1&amp;-1&amp;|0
-\end{bmatrix}
-\end{split}\]</div>
-<p>Kemudian eliminasi elemen di bawah elemen utama dengan:</p>
-<p>\begin{array}{cc}
-R_3 \rightarrow R_3 - R_2
-\end{array}</p>
-<p>Sehingga diperoleh:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix}
-1&amp;1&amp;1&amp;|3\\
-0&amp;1&amp;\frac{1}{2}&amp;|\frac{1}{2} \\
-0&amp;0&amp;-\frac{3}{2}&amp;|-\frac{1}{2}
-\end{bmatrix}
-\end{split}\]</div>
-<p>Langkah 3: Substitusi Balik
-Dari baris ketiga:</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{array}{cc}
--\frac{3}{2} x_3 = -\frac{1}{2}
-\end{array}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\begin{array}{cc}
-x_3 = \frac{1}{3}
-\end{array}
-\]</div>
-<p>Dari baris kedua:</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{array}{cc}
-x_2 + \frac{1}{2} x_3 = \frac{1}{2}
-\end{array}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\begin{array}{cc}
-x_2 + \frac{1}{2} \times \frac{1}{3} = \frac{1}{2}
-\end{array}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\begin{array}{cc}
-x_2 + \frac{1}{6} = \frac{1}{2}
-\end{array}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\begin{array}{cc}
-x_2 = \frac{1}{2} - \frac{1}{6} = \frac{3}{6} - \frac{1}{6} = \frac{2}{6} = \frac{1}{3}
-\end{array}
-\]</div>
-<p>Dari baris pertama:</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{array}{cc}
-x_1 + x_2 + x_3 = 3
-\end{array}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\begin{array}{cc}
-x_1 + \frac{1}{3} + \frac{1}{3} = 3
-\end{array}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-\begin{array}{cc}
-x_1 = 3 - \frac{2}{3} = \frac{9}{3} - \frac{2}{3} = \frac{7}{3}
-\end{array}
-\]</div>
-<p>Kesimpulan
-Jadi, solusi dari sistem persamaan adalah:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-x_1&amp;=\frac{7}{3}\\
-x_2&amp;=\frac{1}{3}\\
-x_3&amp;=\frac{1}{3}
-\end{aligned}
-\end{split}\]</div>
-<iframe scrolling="no" title="Lab11 System of Equations - Multivariable" src="https://www.geogebra.org/material/iframe/id/dmIAq6KX/width/1164/height/816/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/true/ld/false/sdz/true/ctl/false" width="1164px" height="816px" style="border:0px;"> </iframe>
-</section>
-<section id="contoh-soal-3">
-<h2>Contoh Soal 3<a class="headerlink" href="#contoh-soal-3" title="Link to this heading">#</a></h2>
-<p>Selesaikan dengan menggunakan eliminasi gauss</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{array}{cc}
-2x_1+2x_2&amp;=4\\
-x_1+x_2&amp;=2
-\end{array}
-\end{split}\]</div>
-<p>Penyelesaian
-Langkah 1 : Menyelesaikan ke bentuk matriks augmented</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix} 
-2&amp;2&amp;|4\\ 
-1&amp;1&amp;|2 
-\end{bmatrix}
-\end{split}\]</div>
-<p>Langkah 2 : membuat elemen di bawah pivot menjadi nol.</p>
-<p>\begin{array}{cc}
-R_1 \leftarrow R_1 - 2R_2
-\end{array}</p>
-<p>Setelah melakukan perhitungan kita mendapatkan :</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{array}{cc}
-R_1: 2 - 2 \cdot 1 = 0\\
-2 - 2 \cdot 1 = 0\\
-4 - 2 \cdot 2 = 0
-\end{array}
-\end{split}\]</div>
-<p>Sehingga matriks augmented menjadi :</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix} 
-1&amp;1&amp;|2\\
-0&amp;0&amp;|0 
-\end{bmatrix}
-\end{split}\]</div>
-<p>Dari baris kedua, kita dapat mengekspresikan (x_1) dalam bentuk (x_2):</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{array}{cc}
-x_1 + x_2 = 2 \Rightarrow x_1 = 2 - x_2
-\end{array}
-\]</div>
-<p>Karena kita memiliki satu persamaan dengan dua variabel, kita dapat menyatakan solusi dalam bentuk parameter. Misalkan (x_2 = t), maka:</p>
-<div class="math notranslate nohighlight">
-\[
-\begin{array}{cc}
-x_1 = 2 - t
-\end{array}
-\]</div>
-<p>Jadi, solusi umum dari sistem persamaan ini adalah:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{cases} 
-x_1=2-t\\
-x_2=t
-\end{cases}
-\end{split}\]</div>
-<p>di mana (t) adalah parameter bebas.</p>
-</section>
-<section id="contoh-soal-4">
-<h2>Contoh Soal 4<a class="headerlink" href="#contoh-soal-4" title="Link to this heading">#</a></h2>
-<p>Selesaikan dengan menggunakan eliminasi gauss</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{array}{cc}
-x_1+x_2&amp;=5\\
-x_1+2x_3&amp;=6\\
-\end{array}
-\end{split}\]</div>
-<p>Penyelesaian :</p>
-<ol class="arabic simple">
-<li><p>Tulis sistem persamaan dalam bentuk matriks augmented:</p></li>
-</ol>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix}
-1&amp;1&amp;0&amp;|&amp;5\\
-1&amp;0&amp;2&amp;|&amp;4
-\end{bmatrix}
-\end{split}\]</div>
+<section id="sifat-sifat-perkalian-silang">
+<h2>Sifat-sifat Perkalian Silang<a class="headerlink" href="#sifat-sifat-perkalian-silang" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\vec{u} \times \vec{v} = -(\vec{v} \times \vec{u})\)</span> <em>Anticommutative Property</em></p></li>
+</ul>
 <ol class="arabic simple" start="2">
-<li><p>Lakukan operasi baris untuk mendapatkan bentuk eselon baris:</p></li>
+<li><p>a. <span class="math notranslate nohighlight">\((\vec{u} + \vec{v}) \times \vec{w} = \vec{u} \times \vec{w} + \vec{v} \times \vec{w}\)</span> <em>Distributive Properties</em></p></li>
 </ol>
-<p>\begin{array}{cc}
-R_2 \rightarrow R_2
-\end{array}</p>
-<p>Hasilnya :</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix}
-1&amp;1&amp;0&amp;|&amp;5\\
-0&amp;-1&amp;2&amp;|&amp;-1
-\end{bmatrix}
-\end{split}\]</div>
-<p>\begin{array}{cc}
-R_2 \rightarrow \frac{R_2}{-1}
-\end{array}</p>
-<p>Hasilnya :</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix}
-1&amp;1&amp;0&amp;|&amp;5\\
-0&amp;1&amp;-2&amp;|&amp;1
-\end{bmatrix}
-\end{split}\]</div>
-<ol class="arabic simple" start="3">
-<li><p>Lakukan substitusi mundur untuk menemukan solusi:</p></li>
+<p>b. <span class="math notranslate nohighlight">\(\vec{u} \times (\vec{v} + \vec{w}) = \vec{u} \times \vec{v} + \vec{u} \times \vec{w}\)</span>
+3. <span class="math notranslate nohighlight">\(c(\vec{u} \times \vec{v}) = (c\vec{u}) \times \vec{v} = \vec{u} \times (c\vec{v})\)</span>
+4. a. <span class="math notranslate nohighlight">\((\vec{u} \times \vec{v}) \cdot \vec{u} = 0\)</span> <em>Orthogonality Properties</em></p>
+<p>b. <span class="math notranslate nohighlight">\((\vec{u} \times \vec{v}) \cdot \vec{v} = 0\)</span>
+5. <span class="math notranslate nohighlight">\(\vec{u} \times \vec{u} = \vec{0}\)</span></p>
+<ol class="arabic simple" start="6">
+<li><p><span class="math notranslate nohighlight">\(\vec{u} \times \vec{0} = \vec{0}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{u} \cdot (\vec{v} \times \vec{w}) = (\vec{u} \cdot \vec{v}) \cdot \vec{w}\)</span> <em>Triple Scalar Product</em></p></li>
 </ol>
-<ul class="simple">
-<li><p>Dari baris 2:</p></li>
-</ul>
+</section>
+<section id="implementasi-cross-product">
+<h2>Implementasi Cross Product<a class="headerlink" href="#implementasi-cross-product" title="Link to this heading">#</a></h2>
+<p>a. Luas Jajarangenjang</p>
+<p>Jika dua vektor <span class="math notranslate nohighlight">\(\vec{a}\)</span> dan <span class="math notranslate nohighlight">\(\vec{b}\)</span> membentuk sebuah jajargenjang, maka luasnya adalah:</p>
 <div class="math notranslate nohighlight">
 \[
-\begin{array}{cc}
-x_1 + x_2 = 2 \Rightarrow x_1 = 2 - x_2
-\end{array}
+\text{Luas} = |\vec{a} \times \vec{b}|
 \]</div>
-<ul class="simple">
-<li><p>Dari baris 1:</p></li>
-</ul>
+<p>Hasilnya adalah nilai skalar (magnitudo dari hasil cross product).</p>
+<p>b. Luas Segitiga</p>
+<p>Jika titik-titik membentuk segitiga, maka luasnya adalah:</p>
 <div class="math notranslate nohighlight">
 \[
-\begin{array}{cc}
-x_1 + x_2 = 5 \implies x_1 + (1 + 2x_3) = 5 \implies x_1 = 4 - 2x_3
-\end{array}
+\text{Luas} = \frac{1}{2} |\vec{a} \times \vec{b}|
 \]</div>
-<ol class="arabic simple" start="4">
-<li><p>Solusi Akhir:</p></li>
+<p>c. Volume Paralelepiped</p>
+<p>Sebuah paralelepiped dibentuk oleh tiga vektor <span class="math notranslate nohighlight">\(\vec{a}\)</span>, <span class="math notranslate nohighlight">\(\vec{b}\)</span>, dan <span class="math notranslate nohighlight">\(\vec{c}\)</span>. Volumenya dihitung dengan triple scalar product:</p>
+<div class="math notranslate nohighlight">
+\[
+\text{Volume} = |\vec{a} \cdot (\vec{b} \times \vec{c})|
+\]</div>
+<p>Hasilnya adalah nilai absolut dari skalar yang menunjukkan volume bangun tiga dimensi.</p>
+</section>
+<section id="latihan-soal">
+<h2>Latihan Soal<a class="headerlink" href="#latihan-soal" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Tentukan luas jajaran genjang yang ditentukan oleh vektor
+<span class="math notranslate nohighlight">\(
+\vec{u} =
+\begin{vmatrix}
+1\\
+2\\
+\end{vmatrix}
+\)</span>
+dan
+<span class="math notranslate nohighlight">\(
+\vec{v} =
+\begin{vmatrix}
+2\\
+1\\
+\end{vmatrix}
+\)</span></p></li>
+<li><p>Tentukan luas jajaran genjang yang ditentukan oleh vektor
+<span class="math notranslate nohighlight">\(
+\vec{u} =
+\begin{vmatrix}
+2\\
+0\\
+\end{vmatrix}
+\)</span>
+dan
+<span class="math notranslate nohighlight">\(
+\vec{v} =
+\begin{vmatrix}
+0\\
+3\\
+\end{vmatrix}
+\)</span></p></li>
+<li><p>Tentukan luas segitiga dengan titik-titik sudut <span class="math notranslate nohighlight">\((0, 0, 0), (1, 3, -1), dan (2, 1, 1)\)</span></p></li>
+<li><p>Tentukan luas segitiga dengan titik-titik sudut <span class="math notranslate nohighlight">\((5, 2, -1), (3, 6, 2), dan (1, 0, 4)\)</span></p></li>
 </ol>
+</section>
+<section id="jawaban">
+<h2>Jawaban<a class="headerlink" href="#jawaban" title="Link to this heading">#</a></h2>
+<section id="soal-1">
+<h3>Soal 1<a class="headerlink" href="#soal-1" title="Link to this heading">#</a></h3>
+<p>Diketahui
+<span class="math notranslate nohighlight">\(
+\vec{u} =
+\begin{vmatrix}
+1\\
+2\\
+\end{vmatrix}
+\)</span>
+dan
+<span class="math notranslate nohighlight">\(
+\vec{v} =
+\begin{vmatrix}
+2\\
+1\\
+\end{vmatrix}
+\)</span>.</p>
+<p>Tulis ulang sebagai =</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\begin{aligned}
-x_1&amp;=4-2x_3\\
-x_2&amp;=1+2x_3\\
-x_3&amp;=x_3
-\end{aligned}
+\vec{u} =
+\begin{vmatrix}
+1\\
+2\\
+0\\
+\end{vmatrix}
+,
+\vec{v} =
+\begin{vmatrix}
+2\\
+1\\
+0\\
+\end{vmatrix}
 \end{split}\]</div>
-<p>Jadi, solusi dari sistem persamaan adalah:</p>
+<p>Maka:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{u} \times \vec{v} =
+\begin{vmatrix}
+(2)(0) - (0)(1) \\
+-((1)(0) - (0)(2)) \\
+(1)(1) - (2)(2) \\
+\end{vmatrix}
+\end{split}\]</div>
+<p>Hasil dari
+<span class="math notranslate nohighlight">\(
+\vec{u} \times \vec{v} =
+\begin{vmatrix}
+0 \\
+0 \\
+-3 \\
+\end{vmatrix}
+\)</span></p>
+<p>Luas dari jajaran genjang adalah
+<span class="math notranslate nohighlight">\( = |\vec{u} \times \vec{v}| = |-3| = 3
+\)</span></p>
+</section>
+<section id="soal-2">
+<h3>Soal 2<a class="headerlink" href="#soal-2" title="Link to this heading">#</a></h3>
+<p>Diketahui
+<span class="math notranslate nohighlight">\(
+\vec{u} =
+\begin{vmatrix}
+2\\
+0\\
+\end{vmatrix}
+\)</span>
+dan
+<span class="math notranslate nohighlight">\(
+\vec{v} =
+\begin{vmatrix}
+0\\
+3\\
+\end{vmatrix}
+\)</span>.</p>
+<p>Tulis ulang sebagai =</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{u} =
+\begin{vmatrix}
+2\\
+0\\
+0\\
+\end{vmatrix}
+,
+\vec{v} =
+\begin{vmatrix}
+0\\
+3\\
+0\\
+\end{vmatrix}
+\end{split}\]</div>
+<p>Maka:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{u} \times \vec{v} =
+\begin{vmatrix}
+(0)(0) - (0)(3) \\
+-((2)(0) - (0)(0)) \\
+(2)(3) - (0)(0) \\
+\end{vmatrix}
+\end{split}\]</div>
+<p>Hasil dari
+<span class="math notranslate nohighlight">\(
+\vec{u} \times \vec{v} =
+\begin{vmatrix}
+0 \\
+0 \\
+6 \\
+\end{vmatrix}
+\)</span></p>
+<p>Luas dari jajaran genjang adalah
+<span class="math notranslate nohighlight">\( = |\vec{u} \times \vec{v}| = |6| = 6
+\)</span></p>
+</section>
+<section id="soal-3">
+<h3>Soal 3<a class="headerlink" href="#soal-3" title="Link to this heading">#</a></h3>
+<p>Diketahui titik-titik sudut segitiga:</p>
 <div class="math notranslate nohighlight">
 \[
-\begin{array}{cc}
-\left(x_1, x_2, x_3\right) = \left(4 - 2t, 1 + 2t, t\right), \quad t \in \mathbb{R}
-\end{array}
+A = (0, 0, 0), \quad B = (1, 3, -1), \quad C = (2, 1, 1)
 \]</div>
-<p>Sistem ini memiliki banyak solusi karena terdapat parameter bebas <span class="math notranslate nohighlight">\(( t )\)</span>.</p>
+<p>Buat dua vektor dari titik A:</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{AB} = B - A = (1-0, 3-0, -1-0) = (1, 3, -1)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\vec{AC} = C - A = (2-0, 1-0, 1-0) = (2, 1, 1)
+\]</div>
+<p>Cross product dari <span class="math notranslate nohighlight">\(\vec{AB} \times \vec{AC}\)</span>:</p>
+<p>Gunakan determinan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{AB} \times \vec{AC} =
+\begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+1 &amp; 3 &amp; -1 \\
+2 &amp; 1 &amp; 1 \\
+\end{vmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+= \mathbf{i}(3 \cdot 1 - (-1) \cdot 1) - \mathbf{j}(1 \cdot 1 - (-1) \cdot 2) + \mathbf{k}(1 \cdot 1 - 3 \cdot 2)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= \mathbf{i}(3 + 1) - \mathbf{j}(1 + 2) + \mathbf{k}(1 - 6)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= \mathbf{i}(4) - \mathbf{j}(3) + \mathbf{k}(-5)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= (4, -3, -5)
+\]</div>
+<p>Panjang (magnitudo) dari vektor hasil cross product:</p>
+<div class="math notranslate nohighlight">
+\[
+|\vec{AB} \times \vec{AC}| = \sqrt{4^2 + (-3)^2 + (-5)^2} = \sqrt{16 + 9 + 25} = \sqrt{50}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\text{Luas} = \frac{1}{2} \cdot |\vec{AB} \times \vec{AC}| = \frac{1}{2} \cdot \sqrt{50}
+\]</div>
+<p>Luas segitiga adalah =
+<span class="math notranslate nohighlight">\(
+\boxed{\frac{1}{2} \sqrt{50} \approx 3.54}
+\)</span></p>
+</section>
+<section id="soal-4">
+<h3>Soal 4<a class="headerlink" href="#soal-4" title="Link to this heading">#</a></h3>
+<p>Diketahui titik-titik sudut segitiga:</p>
+<div class="math notranslate nohighlight">
+\[
+A = (5, 2, -1), \quad B = (3, 6, 2), \quad C = (1, 0, 4)
+\]</div>
+<p>Buat dua vektor dari satu titik acuan (misalnya titik A):</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{AB} = B - A = (3 - 5, 6 - 2, 2 - (-1)) = (-2, 4, 3)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\vec{AC} = C - A = (1 - 5, 0 - 2, 4 - (-1)) = (-4, -2, 5)
+\]</div>
+<p>Cross product dari <span class="math notranslate nohighlight">\(\vec{AB} \times \vec{AC}\)</span></p>
+<p>Gunakan rumus determinan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{AB} \times \vec{AC} =
+\begin{vmatrix}
+\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \\
+-2 &amp; 4 &amp; 3 \\
+-4 &amp; -2 &amp; 5 \\
+\end{vmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
+= \mathbf{i}(4 \cdot 5 - 3 \cdot (-2)) - \mathbf{j}(-2 \cdot 5 - 3 \cdot (-4)) + \mathbf{k}(-2 \cdot (-2) - 4 \cdot (-4))
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= \mathbf{i}(20 + 6) - \mathbf{j}(-10 + 12) + \mathbf{k}(4 + 16)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= \mathbf{i}(26) - \mathbf{j}(2) + \mathbf{k}(20)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+= (26, -2, 20)
+\]</div>
+<p>Panjang vektor hasil cross product (magnitudo):</p>
+<div class="math notranslate nohighlight">
+\[
+|\vec{AB} \times \vec{AC}| = \sqrt{26^2 + (-2)^2 + 20^2} = \sqrt{676 + 4 + 400} = \sqrt{1080}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\text{Luas} = \frac{1}{2} \cdot |\vec{AB} \times \vec{AC}| = \frac{1}{2} \cdot \sqrt{1080}
+\]</div>
+<p>Luas segitiga adalah =
+<span class="math notranslate nohighlight">\(
+\boxed{\frac{1}{2} \sqrt{1080} \approx 16.43}
+\)</span></p>
+</section>
 </section>
 </section>
 
@@ -862,22 +881,13 @@ x_3&amp;=x_3
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="Dot_Product.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Sistem Persamaan Linier</p>
+        <p class="prev-next-title">Perkalian Titik (Dot Product)</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="jawab.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Matrik</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -895,15 +905,19 @@ x_3&amp;=x_3
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris-elementer">Operasi Baris Elementer</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gauss">Eliminasi Gauss</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bentuk-eselon-baris">Bentuk Eselon Baris</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi">Definisi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-hasil-kali-silang">Contoh Hasil Kali Silang</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-perkalian-silang">Determinan Perkalian Silang</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sifat-sifat-perkalian-silang">Sifat-sifat Perkalian Silang</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-cross-product">Implementasi Cross Product</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#latihan-soal">Latihan Soal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jawaban">Jawaban</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1">Soal 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-2">Soal 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-3">Soal 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-4">Soal 4</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-1">Contoh Soal 1</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-2">Contoh Soal 2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-3">Contoh Soal 3</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal-4">Contoh Soal 4</a></li>
 </ul>
   </nav></div>
 
