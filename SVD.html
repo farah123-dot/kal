@@ -196,8 +196,6 @@
 <li class="toctree-l1"><a class="reference internal" href="Dot_Product.html">Perkalian Titik (Dot Product)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="CrossProduct.html">Cross Product</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Apa itu SVD (Singular Value Decompotion)</a></li>
-
-
 </ul>
 
     </div>
@@ -393,46 +391,27 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Apa itu SVD (Singular Value Decompotion)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kegunaan-svd-singular-value-decompotion">Kegunaan SVD (Singular Value Decompotion)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagaimana-formula-svd-singular-value-decompotion">Bagaimana Formula SVD (Singular Value Decompotion)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-2x2">Matriks 2x2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-a-t-a-dan-a-a-t"><em>Langkah 1: Hitung <span class="math notranslate nohighlight">\(A^T A\)</span> dan <span class="math notranslate nohighlight">\(A A^T\)</span></em></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-cari-eigenvalue-dari-a-t-a"><em>Langkah 2: Cari Eigenvalue dari <span class="math notranslate nohighlight">\(A^T A\)</span></em></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-hitung-singular-values"><em>Langkah 3: Hitung Singular Values</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kegunaan-svd-singular-value-decompotion">Kegunaan SVD (Singular Value Decompotion)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-manual-matriks-2x2">Perhitungan Manual Matriks 2x2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-a-t-a-dan-a-a-t"><em>Langkah 1: Hitung <span class="math notranslate nohighlight">\(A^T A\)</span> dan <span class="math notranslate nohighlight">\(A A^T\)</span></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-cari-eigenvalue-dari-a-t-a"><em>Langkah 2: Cari Eigenvalue dari <span class="math notranslate nohighlight">\(A^T A\)</span></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-hitung-singular-values"><em>Langkah 3: Hitung Singular Values</em></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-cari-v-eigenvector-dari-a-ta"><em>Langkah 4: Cari V (eigenvector dari <span class="math notranslate nohighlight">\(A^TA\)</span>)</em></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-lambda-16">Untuk <span class="math notranslate nohighlight">\(\lambda = 16\)</span>:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-lambda-4">Untuk <span class="math notranslate nohighlight">\(\lambda = 4\)</span>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5-bentuk-sigma-dan-v"><em>Langkah 5: Bentuk <span class="math notranslate nohighlight">\(\Sigma\)</span> dan <span class="math notranslate nohighlight">\(V\)</span></em></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5-bentuk-sigma-dan-v"><em>Langkah 5: Bentuk <span class="math notranslate nohighlight">\(\Sigma\)</span> dan <span class="math notranslate nohighlight">\(V\)</span></em></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-6-hitung-u-dengan-rumus"><em>Langkah 6: Hitung <span class="math notranslate nohighlight">\(U\)</span></em> dengan rumus:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-sigma-1-4-v-1-frac-1-sqrt-2-begin-bmatrix-1-1-end-bmatrix">Untuk <span class="math notranslate nohighlight">\(\sigma_1 = 4\)</span>, <span class="math notranslate nohighlight">\(v_1 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 1 \end{bmatrix}\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-sigma-2-2-v-2-frac-1-sqrt-2-begin-bmatrix-1-1-end-bmatrix">Untuk <span class="math notranslate nohighlight">\(\sigma_2 = 2\)</span>, <span class="math notranslate nohighlight">\(v_2 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ -1 \end{bmatrix}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akhir-svd">Hasil Akhir SVD</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-manual-matriks-4x2">Perhitungan Manual Matriks 4x2</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akhir-svd">Hasil Akhir SVD</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-4x2">Matriks 4x2</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-a-t-a-a-t-a-begin-bmatrix-3-2-4-1-7-5-3-1-end-bmatrix-begin-bmatrix-3-7-2-5-4-3-1-1-end-bmatrix">Langkah 2: Hitung <span class="math notranslate nohighlight">\(A^T A\)</span>
-$$
-A^T A =
-\begin{bmatrix}
-3 &amp; 2 &amp; 4 &amp; 1 \
-7 &amp; 5 &amp; 3 &amp; 1
-\end{bmatrix}
-\begin{bmatrix}
-3 &amp; 7 \
-2 &amp; 5 \
-4 &amp; 3 \
-1 &amp; 1
-\end{bmatrix}</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#verifikasi-a-approx-u-sigma-v-t">Verifikasi
-$$
-A \approx U \Sigma V^T</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -476,21 +455,27 @@ SVD dapat digunakan untuk analisis teks, seperti dalam penambangan teks untuk me
 <li><p><strong>Penghilangan Noise pada Gambar :</strong>
 SVD dapat digunakan untuk menghilangkan noise dari gambar dengan membuang komponen-komponen yang kurang penting yang mungkin mewakili noise.</p></li>
 </ol>
-</section>
-<section id="bagaimana-formula-svd-singular-value-decompotion">
-<h2>Bagaimana Formula SVD (Singular Value Decompotion)<a class="headerlink" href="#bagaimana-formula-svd-singular-value-decompotion" title="Link to this heading">#</a></h2>
-<p>Bagaimana Formula SVD (Singular Value Decomposition)}\</p>
-<p>Jika:
-$<span class="math notranslate nohighlight">\(
-A_{m \times n} = U_{m \times m} \cdot \Sigma_{m \times n} \cdot V^T_{n \times n}
-\)</span>$</p>
-<p>Maka:</p>
-<p><span class="math notranslate nohighlight">\(\mathbf{U}\)</span>: Kolom-kolomnya adalah \textbf{left singular vectors}, yaitu vektor eigen dari matriks <span class="math notranslate nohighlight">\(A A^T\)</span>.</p>
-<p><span class="math notranslate nohighlight">\(\mathbf{\Sigma}\)</span>: Matriks diagonal yang berisi \textbf{singular values}, yaitu akar dari nilai eigen dari <span class="math notranslate nohighlight">\(A^T A\)</span> atau <span class="math notranslate nohighlight">\(A A^T\)</span>.</p>
-<p><span class="math notranslate nohighlight">\(\mathbf{V}\)</span>: Kolom-kolomnya adalah \textbf{right singular vectors}, yaitu vektor eigen dari matriks <span class="math notranslate nohighlight">\(A^T A\)</span>.</p>
-</section>
-<section id="matriks-2x2">
-<h2>Matriks 2x2<a class="headerlink" href="#matriks-2x2" title="Link to this heading">#</a></h2>
+<p>Untuk sebuah matriks A berukuran <span class="math notranslate nohighlight">\(m \times n\)</span>, SVD menyatakan bahwa:</p>
+<div class="math notranslate nohighlight">
+\[
+A = U \Sigma V^T
+\]</div>
+<p>di mana:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(A\)</span>: matriks asli berukuran <span class="math notranslate nohighlight">\(m \times n\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(U\)</span>: matriks ortogonal berukuran <span class="math notranslate nohighlight">\(m \times m\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\Sigma\)</span>: matriks diagonal berukuran <span class="math notranslate nohighlight">\(m \times n\)</span>, berisi nilai singular (singular values)</p></li>
+<li><p><span class="math notranslate nohighlight">\(V^T\)</span>: transpose dari matriks ortogonal <span class="math notranslate nohighlight">\(V\)</span> berukuran <span class="math notranslate nohighlight">\(n \times n\)</span></p></li>
+</ul>
+<p>Penjelasan Komponen</p>
+<ul class="simple">
+<li><p>Singular values (nilai singular) adalah akar dari eigenvalue matriks <span class="math notranslate nohighlight">\(A^TA\)</span> atau <span class="math notranslate nohighlight">\(AA^T\)</span>.</p></li>
+<li><p>Kolom-kolom U adalah eigenvektor dari <span class="math notranslate nohighlight">\(AA^T\)</span>.</p></li>
+<li><p>Kolom-kolom V adalah eigenvektor dari <span class="math notranslate nohighlight">\(A^TA\)</span>.</p></li>
+<li><p>Matriks <span class="math notranslate nohighlight">\(\Sigma\)</span> hanya memiliki nilai non-nol di diagonal utama dan sisanya nol.</p></li>
+</ul>
+<section id="perhitungan-manual-matriks-2x2">
+<h3>Perhitungan Manual Matriks 2x2<a class="headerlink" href="#perhitungan-manual-matriks-2x2" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 A = \begin{bmatrix}
@@ -501,7 +486,7 @@ A = \begin{bmatrix}
 </section>
 <hr class="docutils" />
 <section id="langkah-1-hitung-a-t-a-dan-a-a-t">
-<h2><em>Langkah 1: Hitung <span class="math notranslate nohighlight">\(A^T A\)</span> dan <span class="math notranslate nohighlight">\(A A^T\)</span></em><a class="headerlink" href="#langkah-1-hitung-a-t-a-dan-a-a-t" title="Link to this heading">#</a></h2>
+<h3><em>Langkah 1: Hitung <span class="math notranslate nohighlight">\(A^T A\)</span> dan <span class="math notranslate nohighlight">\(A A^T\)</span></em><a class="headerlink" href="#langkah-1-hitung-a-t-a-dan-a-a-t" title="Link to this heading">#</a></h3>
 <p>Karena <span class="math notranslate nohighlight">\(A\)</span> adalah matriks simetris <span class="math notranslate nohighlight">\(2 \times 2\)</span>, maka <span class="math notranslate nohighlight">\(A^T = A\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -533,7 +518,7 @@ A^T A = A A =
 </section>
 <hr class="docutils" />
 <section id="langkah-2-cari-eigenvalue-dari-a-t-a">
-<h2><em>Langkah 2: Cari Eigenvalue dari <span class="math notranslate nohighlight">\(A^T A\)</span></em><a class="headerlink" href="#langkah-2-cari-eigenvalue-dari-a-t-a" title="Link to this heading">#</a></h2>
+<h3><em>Langkah 2: Cari Eigenvalue dari <span class="math notranslate nohighlight">\(A^T A\)</span></em><a class="headerlink" href="#langkah-2-cari-eigenvalue-dari-a-t-a" title="Link to this heading">#</a></h3>
 <p>Misal <span class="math notranslate nohighlight">\(\lambda\)</span> adalah eigenvalue, maka:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -559,13 +544,14 @@ A^T A = A A =
 </section>
 <hr class="docutils" />
 <section id="langkah-3-hitung-singular-values">
-<h2><em>Langkah 3: Hitung Singular Values</em><a class="headerlink" href="#langkah-3-hitung-singular-values" title="Link to this heading">#</a></h2>
+<h3><em>Langkah 3: Hitung Singular Values</em><a class="headerlink" href="#langkah-3-hitung-singular-values" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[
 \sigma_i = \sqrt{\lambda_i}
 \Rightarrow
 \sigma_1 = \sqrt{16} = 4,\quad \sigma_2 = \sqrt{4} = 2
 \]</div>
+</section>
 </section>
 <hr class="docutils" />
 <section id="langkah-4-cari-v-eigenvector-dari-a-ta">
@@ -612,10 +598,9 @@ v_2 = \begin{bmatrix}
 v_2 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ -1 \end{bmatrix}
 \end{split}\]</div>
 </section>
-</section>
 <hr class="docutils" />
 <section id="langkah-5-bentuk-sigma-dan-v">
-<h2><em>Langkah 5: Bentuk <span class="math notranslate nohighlight">\(\Sigma\)</span> dan <span class="math notranslate nohighlight">\(V\)</span></em><a class="headerlink" href="#langkah-5-bentuk-sigma-dan-v" title="Link to this heading">#</a></h2>
+<h3><em>Langkah 5: Bentuk <span class="math notranslate nohighlight">\(\Sigma\)</span> dan <span class="math notranslate nohighlight">\(V\)</span></em><a class="headerlink" href="#langkah-5-bentuk-sigma-dan-v" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \Sigma = \begin{bmatrix}
@@ -633,6 +618,7 @@ V = \left[
 1 &amp; -1 \\
 \end{bmatrix}
 \end{split}\]</div>
+</section>
 </section>
 <hr class="docutils" />
 <section id="langkah-6-hitung-u-dengan-rumus">
@@ -660,10 +646,9 @@ u_2 = \frac{1}{2} A v_2 = \frac{1}{2\sqrt{2}} \begin{bmatrix} 3 - 1 \\ 1 - 3 \en
 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ -1 \end{bmatrix}
 \end{split}\]</div>
 </section>
-</section>
 <hr class="docutils" />
 <section id="hasil-akhir-svd">
-<h2>Hasil Akhir SVD<a class="headerlink" href="#hasil-akhir-svd" title="Link to this heading">#</a></h2>
+<h3>Hasil Akhir SVD<a class="headerlink" href="#hasil-akhir-svd" title="Link to this heading">#</a></h3>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 U =  \begin{bmatrix}
@@ -749,128 +734,170 @@ Apakah A sama dengan rekonstruksi?  True
 </div>
 </div>
 </section>
-<section id="matriks-4x2">
-<h2>Matriks 4x2<a class="headerlink" href="#matriks-4x2" title="Link to this heading">#</a></h2>
-<p>Langkah-langkah Dekomposisi SVD</p>
-<p>Dekomposisi Singular Value (SVD) dari sebuah matriks <span class="math notranslate nohighlight">\(A\)</span> dinyatakan sebagai:
-$<span class="math notranslate nohighlight">\(
-A = U \Sigma V^T
-\)</span>$</p>
-<p>Langkah 1: Matriks A
-Misalkan diberikan matriks:
+<section id="perhitungan-manual-matriks-4x2">
+<h3>Perhitungan Manual Matriks 4x2<a class="headerlink" href="#perhitungan-manual-matriks-4x2" title="Link to this heading">#</a></h3>
+<p>Diketahui:
 $<span class="math notranslate nohighlight">\(
 A =
 \begin{bmatrix}
 3 &amp; 7 \\
 2 &amp; 5 \\
 4 &amp; 3 \\
-1 &amp; 1
+1 &amp; 1 \\
 \end{bmatrix}
-\quad \text{(ukuran } 4 \times 2)
+\quad \text{(ukuran 4 × 2)}
 \)</span>$</p>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="langkah-2-hitung-a-t-a-a-t-a-begin-bmatrix-3-2-4-1-7-5-3-1-end-bmatrix-begin-bmatrix-3-7-2-5-4-3-1-1-end-bmatrix">
-<h1>Langkah 2: Hitung <span class="math notranslate nohighlight">\(A^T A\)</span>
-$$
+<p>Kita akan melakukan <strong>Singular Value Decomposition (SVD)</strong> terhadap matriks ini, yaitu:</p>
+<div class="math notranslate nohighlight">
+\[
+A = U \cdot \Sigma \cdot V^T
+\]</div>
+<p>Langkah-Langkah Singkat (Manual Konsep)</p>
+<ol class="arabic simple">
+<li><p>Hitung <span class="math notranslate nohighlight">\(A^T A\)</span></p></li>
+</ol>
+<p>Karena A adalah 4×2, maka <span class="math notranslate nohighlight">\(A^T\)</span> adalah 2×4, sehingga:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 A^T A =
 \begin{bmatrix}
-3 &amp; 2 &amp; 4 &amp; 1 \
-7 &amp; 5 &amp; 3 &amp; 1
+3 &amp; 2 &amp; 4 &amp; 1 \\
+7 &amp; 5 &amp; 3 &amp; 1 \\
 \end{bmatrix}
+\cdot
 \begin{bmatrix}
-3 &amp; 7 \
-2 &amp; 5 \
-4 &amp; 3 \
-1 &amp; 1
-\end{bmatrix}<a class="headerlink" href="#langkah-2-hitung-a-t-a-a-t-a-begin-bmatrix-3-2-4-1-7-5-3-1-end-bmatrix-begin-bmatrix-3-7-2-5-4-3-1-1-end-bmatrix" title="Link to this heading">#</a></h1>
-<p>\begin{bmatrix}
-30 &amp; 44 \
-44 &amp; 84
+3 &amp; 7 \\
+2 &amp; 5 \\
+4 &amp; 3 \\
+1 &amp; 1 \\
 \end{bmatrix}
-$$</p>
-<p>Langkah 3: Cari Nilai Eigen dari <span class="math notranslate nohighlight">\(A^T A\)</span>
-Tentukan akar dari karakteristik determinan:
-$<span class="math notranslate nohighlight">\(
-\det(A^T A - \lambda I) = 0
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
-\det \begin{bmatrix}
+\end{split}\]</div>
+<p>Kalikan baris × kolom:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^T A =
+\begin{bmatrix}
+3^2 + 2^2 + 4^2 + 1^2 &amp; 3×7 + 2×5 + 4×3 + 1×1 \\
+3×7 + 2×5 + 4×3 + 1×1 &amp; 7^2 + 5^2 + 3^2 + 1^2 \\
+\end{bmatrix}
+\end{split}\]</div>
+<p>Hitung elemen-elemennya:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(3^2 + 2^2 + 4^2 + 1^2 = 9 + 4 + 16 + 1 = 30\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3×7 + 2×5 + 4×3 + 1×1 = 21 + 10 + 12 + 1 = 44\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(7^2 + 5^2 + 3^2 + 1^2 = 49 + 25 + 9 + 1 = 84\)</span></p></li>
+</ul>
+<p>Jadi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A^T A =
+\begin{bmatrix}
+30 &amp; 44 \\
+44 &amp; 84 \\
+\end{bmatrix}
+\end{split}\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Hitung <strong>eigenvalue</strong> dari <span class="math notranslate nohighlight">\(A^T A\)</span></p></li>
+</ol>
+<p>Cari <span class="math notranslate nohighlight">\(\lambda\)</span> dari:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left|
+\begin{matrix}
 30 - \lambda &amp; 44 \\
-44 &amp; 84 - \lambda
-\end{bmatrix} = 0
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
+44 &amp; 84 - \lambda \\
+\end{matrix}
+\right| = 0
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[
 (30 - \lambda)(84 - \lambda) - 44^2 = 0
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
+\Rightarrow
+\lambda^2 - 114\lambda + (2520 - 1936) = 0
+\Rightarrow
 \lambda^2 - 114\lambda + 584 = 0
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
-\lambda = \frac{114 \pm \sqrt{114^2 - 4 \cdot 1 \cdot 584}}{2} = \frac{114 \pm \sqrt{10660}}{2}
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
-\Rightarrow \lambda_1 \approx 108.63,\quad \lambda_2 \approx 5.37
-\)</span>$</p>
-<p>Langkah 4: Nilai Singular
-$<span class="math notranslate nohighlight">\(
-\sigma_1 = \sqrt{108.63} \approx 10.42,\quad \sigma_2 = \sqrt{5.37} \approx 2.32
-\)</span>$</p>
-<p>Langkah 5: Matriks <span class="math notranslate nohighlight">\(\Sigma\)</span>
-Karena <span class="math notranslate nohighlight">\(A\)</span> berukuran <span class="math notranslate nohighlight">\(4 \times 2\)</span>, maka matriks <span class="math notranslate nohighlight">\(\Sigma\)</span> berbentuk:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Gunakan rumus kuadrat:</p>
+<div class="math notranslate nohighlight">
+\[
+\lambda = \frac{114 \pm \sqrt{114^2 - 4 \cdot 584}}{2}
+= \frac{114 \pm \sqrt{12996 - 2336}}{2}
+= \frac{114 \pm \sqrt{10660}}{2}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\sqrt{10660} \approx 103.25
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\lambda_1 \approx \frac{114 + 103.25}{2} = 108.625, \quad
+\lambda_2 \approx \frac{114 - 103.25}{2} = 5.375
+\]</div>
+<ol class="arabic simple" start="3">
+<li><p>Cari <strong>singular values</strong> = akar dari eigenvalue:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[
+\sigma_1 = \sqrt{108.625} \approx 10.42, \quad
+\sigma_2 = \sqrt{5.375} \approx 2.32
+\]</div>
+<ol class="arabic simple" start="4">
+<li><p>Bangun matriks <span class="math notranslate nohighlight">\(\Sigma\)</span></p></li>
+</ol>
+<p>Karena A adalah 4×2, maka <span class="math notranslate nohighlight">\(\Sigma\)</span> adalah 4×2:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \Sigma =
 \begin{bmatrix}
 10.42 &amp; 0 \\
 0 &amp; 2.32 \\
 0 &amp; 0 \\
-0 &amp; 0
+0 &amp; 0 \\
 \end{bmatrix}
-\quad (4 \times 2)
-\)</span>$</p>
-<p>Langkah 6: Matriks <span class="math notranslate nohighlight">\(V\)</span>
-Berdasarkan eigenvektor dari <span class="math notranslate nohighlight">\(A^T A\)</span>, diperoleh:
+\end{split}\]</div>
+<ol class="arabic simple" start="5">
+<li><p>Matriks <span class="math notranslate nohighlight">\(V\)</span> dan <span class="math notranslate nohighlight">\(U\)</span></p></li>
+</ol>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(V\)</span> berasal dari eigenvector <span class="math notranslate nohighlight">\(A^T A\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(U = \frac{1}{\sigma_i} A v_i\)</span></p></li>
+</ul>
+<p>Kesimpulan SVD:</p>
+<div class="math notranslate nohighlight">
+\[
+A_{4×2} = U_{4×4} \cdot \Sigma_{4×2} \cdot V^T_{2×2}
+\]</div>
+<p>Dengan:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Sigma = \begin{bmatrix} 10.42 &amp; 0 \\ 0 &amp; 2.32 \\ 0 &amp; 0 \\ 0 &amp; 0 \end{bmatrix}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(V\)</span>: eigenvector dari <span class="math notranslate nohighlight">\(A^T A\)</span>
 $<span class="math notranslate nohighlight">\(
-V =
-\begin{bmatrix}
--0.4884 &amp; -0.8726 \\
--0.8726 &amp; 0.4884
-\end{bmatrix}
-\quad \Rightarrow \quad
 V^T =
 \begin{bmatrix}
--0.4884 &amp; -0.8726 \\
--0.8726 &amp; 0.4884
+-0.488 &amp; -0.873 \\
+-0.873 &amp;  0.488 \\
 \end{bmatrix}
-\)</span>$</p>
-<p>Langkah 7: Matriks <span class="math notranslate nohighlight">\(U\)</span>
-Gunakan:
-$<span class="math notranslate nohighlight">\(
-u_i = \frac{1}{\sigma_i} A v_i
-\)</span>$</p>
-<p>Hasilnya setelah normalisasi adalah:
-$<span class="math notranslate nohighlight">\(
+\)</span>$</p></li>
+</ul>
+<blockquote>
+<div><p>Baris-barisnya adalah vektor eigen dari <span class="math notranslate nohighlight">\(A^T A\)</span></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(U\)</span>: dihitung dari <span class="math notranslate nohighlight">\(Av_i / \sigma_i\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 U =
 \begin{bmatrix}
--0.7267 &amp; -0.3453 &amp; 0.7732 &amp; 0.0853 \\
--0.5124 &amp; -0.3004 &amp; -0.3118 &amp; -0.7613 \\
--0.4386 &amp; 0.8736 &amp; -0.4639 &amp; 0.2802 \\
--0.1306 &amp; 0.1657 &amp; -0.2996 &amp; 0.5785
+-0.727 &amp; -0.345 &amp; -0.574 &amp; -0.153 \\
+-0.512 &amp; -0.300 &amp;  0.792 &amp;  0.139 \\
+-0.439 &amp;  0.874 &amp;  0.082 &amp; -0.195 \\
+-0.131 &amp;  0.166 &amp; -0.190 &amp;  0.959 \\
 \end{bmatrix}
-\)</span>$</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="verifikasi-a-approx-u-sigma-v-t">
-<h1>Verifikasi
-$$
-A \approx U \Sigma V^T<a class="headerlink" href="#verifikasi-a-approx-u-sigma-v-t" title="Link to this heading">#</a></h1>
-<p>\begin{bmatrix}
-3 &amp; 7 \
-2 &amp; 5 \
-4 &amp; 3 \
-1 &amp; 1
-\end{bmatrix}
-\quad \text{(rekonstruksi mendekati A asli)}
-$$</p>
+\end{split}\]</div>
+<blockquote>
+<div><p>Kolom-kolom <span class="math notranslate nohighlight">\(U\)</span> adalah vektor ortonormal yang membentang ruang kolom dari <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -951,6 +978,8 @@ Apakah A sama dengan rekonstruksi?  True
 </div>
 </div>
 </section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1007,46 +1036,27 @@ Apakah A sama dengan rekonstruksi?  True
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Apa itu SVD (Singular Value Decompotion)</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kegunaan-svd-singular-value-decompotion">Kegunaan SVD (Singular Value Decompotion)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagaimana-formula-svd-singular-value-decompotion">Bagaimana Formula SVD (Singular Value Decompotion)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-2x2">Matriks 2x2</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-a-t-a-dan-a-a-t"><em>Langkah 1: Hitung <span class="math notranslate nohighlight">\(A^T A\)</span> dan <span class="math notranslate nohighlight">\(A A^T\)</span></em></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-cari-eigenvalue-dari-a-t-a"><em>Langkah 2: Cari Eigenvalue dari <span class="math notranslate nohighlight">\(A^T A\)</span></em></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-hitung-singular-values"><em>Langkah 3: Hitung Singular Values</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kegunaan-svd-singular-value-decompotion">Kegunaan SVD (Singular Value Decompotion)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-manual-matriks-2x2">Perhitungan Manual Matriks 2x2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-hitung-a-t-a-dan-a-a-t"><em>Langkah 1: Hitung <span class="math notranslate nohighlight">\(A^T A\)</span> dan <span class="math notranslate nohighlight">\(A A^T\)</span></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-cari-eigenvalue-dari-a-t-a"><em>Langkah 2: Cari Eigenvalue dari <span class="math notranslate nohighlight">\(A^T A\)</span></em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-hitung-singular-values"><em>Langkah 3: Hitung Singular Values</em></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-4-cari-v-eigenvector-dari-a-ta"><em>Langkah 4: Cari V (eigenvector dari <span class="math notranslate nohighlight">\(A^TA\)</span>)</em></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-lambda-16">Untuk <span class="math notranslate nohighlight">\(\lambda = 16\)</span>:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-lambda-4">Untuk <span class="math notranslate nohighlight">\(\lambda = 4\)</span>:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5-bentuk-sigma-dan-v"><em>Langkah 5: Bentuk <span class="math notranslate nohighlight">\(\Sigma\)</span> dan <span class="math notranslate nohighlight">\(V\)</span></em></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-5-bentuk-sigma-dan-v"><em>Langkah 5: Bentuk <span class="math notranslate nohighlight">\(\Sigma\)</span> dan <span class="math notranslate nohighlight">\(V\)</span></em></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-6-hitung-u-dengan-rumus"><em>Langkah 6: Hitung <span class="math notranslate nohighlight">\(U\)</span></em> dengan rumus:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-sigma-1-4-v-1-frac-1-sqrt-2-begin-bmatrix-1-1-end-bmatrix">Untuk <span class="math notranslate nohighlight">\(\sigma_1 = 4\)</span>, <span class="math notranslate nohighlight">\(v_1 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ 1 \end{bmatrix}\)</span></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#untuk-sigma-2-2-v-2-frac-1-sqrt-2-begin-bmatrix-1-1-end-bmatrix">Untuk <span class="math notranslate nohighlight">\(\sigma_2 = 2\)</span>, <span class="math notranslate nohighlight">\(v_2 = \frac{1}{\sqrt{2}} \begin{bmatrix} 1 \\ -1 \end{bmatrix}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akhir-svd">Hasil Akhir SVD</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#perhitungan-manual-matriks-4x2">Perhitungan Manual Matriks 4x2</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akhir-svd">Hasil Akhir SVD</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-4x2">Matriks 4x2</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-2-hitung-a-t-a-a-t-a-begin-bmatrix-3-2-4-1-7-5-3-1-end-bmatrix-begin-bmatrix-3-7-2-5-4-3-1-1-end-bmatrix">Langkah 2: Hitung <span class="math notranslate nohighlight">\(A^T A\)</span>
-$$
-A^T A =
-\begin{bmatrix}
-3 &amp; 2 &amp; 4 &amp; 1 \
-7 &amp; 5 &amp; 3 &amp; 1
-\end{bmatrix}
-\begin{bmatrix}
-3 &amp; 7 \
-2 &amp; 5 \
-4 &amp; 3 \
-1 &amp; 1
-\end{bmatrix}</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#verifikasi-a-approx-u-sigma-v-t">Verifikasi
-$$
-A \approx U \Sigma V^T</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>
